@@ -223,22 +223,22 @@ public class PokerTableController implements Initializable {
 	public void Handle_GameState(GamePlay HubPokerGame) 
 	{
 		// Very confused
-		ArrayList<Integer> iPositions;
-		for(Integer iPos : iPositions)
-		{
-			ArrayList<Image> iCardImgs = HubPokerGame.GetCardsByPositionPlayer(iPos,mainApp.getPlayer());
-			for(Image iCard: iCardImgs)
-			{
-				ImageView iv = new ImageView(
-						new Image(getClass().getRecourcesAsStream(Card.ReturnCardImagePath()), 75, 75,
-					getCardHBox(iPos).getChildren().add(iv)));
-			}
-			
-			if(getCardHBox(iPos).getChildren().size() > 2)
-			{
-				//Make a new instance of Handscore?
-			}
-		}
+				ArrayList<Integer> iPositions = new ArrayList<Integer>();
+				for(Integer iPos : iPositions)
+				{
+					/*ArrayList<Image> iCardImgs = HubPokerGame.GetCardsByPositionPlayer(iPos,mainApp.getPlayer());
+					for(Image iCard: iCardImgs)
+					{
+						ImageView iv = new ImageView(
+								new Image(getClass().getRecourcesAsStream(Card.ReturnCardImagePath()), 75, 75,
+							getCardHBox(iPos).getChildren().add(iv)));
+					}*/
+					
+					if(getCardHBox(iPos).getChildren().size() > 2)
+					{
+						//Make a new instance of Handscore?
+					}
+				}
 	}
 
 	private ImageView BuildImage(int iCardNbr) {
